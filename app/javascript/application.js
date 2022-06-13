@@ -7,3 +7,5 @@ import 'popper';
 import 'bootstrap';
 //= require rails-ujs
 //= require_tree .
+import 'trix';
+import '@rails/actiontext';

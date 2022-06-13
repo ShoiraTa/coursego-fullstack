@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title TodoRails
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_importmap_tags
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %script{"data-mutate-approach" => "sync", :src => "https://kit.fontawesome.com/36c60608a5.js"}
+  %body
+    = render 'layouts/header'
+    = yield
+  
+  = javascript_include_tag 'application'
