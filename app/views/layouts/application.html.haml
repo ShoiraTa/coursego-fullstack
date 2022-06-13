@@ -12,6 +12,8 @@
     %script{"data-mutate-approach" => "sync", :src => "https://kit.fontawesome.com/36c60608a5.js"}
   %body
     = render 'layouts/header'
+    %p.notice= notice
+    %p.alert= alert
     = yield
   
   = javascript_include_tag 'application'

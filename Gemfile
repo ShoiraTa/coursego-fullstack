@@ -17,6 +17,8 @@ gem "bootstrap"
 gem "sassc-rails"
 gem "haml-rails", "~> 2.0"
 gem 'simple_form'
+gem 'faker'
+gem 'devise'
 # gem "redis", "~> 4.0"
 # gem "kredis"
 # gem "bcrypt", "~> 3.1.7"
