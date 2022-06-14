@@ -10,3 +10,26 @@
  .active .nav-link{
    color: #fff!important;
  }
+
+ body { 
+  margin: 0;
+}
+
+.jumbotron { 
+  padding: 30px; /* fills out the jumbotron */
+  background-color: #E9ECEF;
+  border-radius: 5px;
+}
+
+.container {
+  width: 1170px; /* specify a width */
+  margin: 0 auto;  /* centers the container */
+  padding: 0 15px; /* adds some padding to the left and right*/
+}
+
+.jumbotron h1 { 
+  font-weight: 200;
+  font-size: 3rem;
+  color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+  letter-spacing: 1px;
+}
