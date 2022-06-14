@@ -9,3 +9,9 @@ import 'bootstrap';
 //= require_tree .
 import 'trix';
 import '@rails/actiontext';
+
+// let button = document.getElementsByClassName('btn-close')[0];
+// console.log(button);
+// button.addEventListener('click', () => {
+//   console.log('clicked');
+// });

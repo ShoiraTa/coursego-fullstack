@@ -2,3 +2,11 @@
  @import "bootstrap";
 //  @import "trix/dist/trix";
  @import "./actiontext.scss";
+
+ input{
+   border: none;
+ }
+
+ .active .nav-link{
+   color: #fff!important;
+ }
