@@ -1,4 +1,4 @@
-class StaticPagesController < ApplicationController
+class HomeController < ApplicationController
   skip_before_action :authenticate_user!, :only => [:index]
   def index
     @popular_courses = Course.limit(3)
@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
     @recent_courses = Course.all.limit(3).order(created_at: :desc)
   end
 
-  def privacy_policy
+  def activity
+    @activities = PublicActivity::Activity.all
   end
 end
