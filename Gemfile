@@ -12,13 +12,21 @@ gem "stimulus-rails"
 gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
-
-
+gem "jquery-rails"
+gem "bootstrap"
+gem "sassc-rails"
+gem "haml-rails", "~> 2.0"
+gem 'simple_form'
+gem 'faker'
+gem "devise", github: "heartcombo/devise", branch: "main"
+gem 'friendly_id', '~> 5.4.0'
+gem 'ransack'
 # gem "redis", "~> 4.0"
 # gem "kredis"
 # gem "bcrypt", "~> 3.1.7"
 # gem "sassc-rails"
-# gem "image_processing", "~> 1.2"
+gem 'public_activity'
+gem "image_processing", "~> 1.2"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
