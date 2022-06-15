@@ -12,6 +12,18 @@ class Course < ApplicationRecord
   # Rich text editor for new and edit
   has_rich_text :description
 
+  # Render languages and levels collection
+  LANGUAGES = ["English", "Russian", "Uzbek"]
+  LEVELS=  ["Beginner", "Intermediate", "Advanced", "All"]
+
+  def self.languages
+    LANGUAGES.map{|language| [language, language]}
+  end
+
+  def self.levels
+    LEVELS.map{|level| [level, level]}
+  end
+
   def to_s
     title    
   end
