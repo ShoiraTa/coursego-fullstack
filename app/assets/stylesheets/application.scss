@@ -33,3 +33,6 @@
   color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
   letter-spacing: 1px;
 }
+
+.form-control.is-invalid{ background-image: none; }
+.form-control.is-valid{ background-image: none; }
