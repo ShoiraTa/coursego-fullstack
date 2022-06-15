@@ -2,6 +2,10 @@
 
 > Advanced e-learning platform for selling content online, build with Ruby on Rails using 25+ most popular Ruby on Rails gems.
 
+## Live preview
+
+[Follow the link](https://get-courses.herokuapp.com/)
+
 ## Built With
 
 ### technologies
