@@ -12,13 +12,12 @@ class User < ApplicationRecord
   def assign_default_role
     if User.count ===1
       self.add_role(:admin) if self.roles.blank?
-      self.add_role(:student) if self.roles.blank?
-      self.add_role(:teacher) if self.roles.blank?
+      self.add_role(:student) 
+      self.add_role(:teacher) 
     else 
       self.add_role(:student) if self.roles.blank?
-      self.add_role(:teacher) if self.roles.blank?
+      self.add_role(:teacher) 
     end
-    
   end
 
 
