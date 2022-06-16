@@ -5,6 +5,7 @@ class Course < ApplicationRecord
   validates :description, presence:  true, length: {minimum:5}
   # Assosiations
   belongs_to :user
+  has_many :lessons, dependent: :destroy
 
 
   # Friendly id 

@@ -28,6 +28,11 @@ class User < ApplicationRecord
     email
   end
 
+  # check if user online updated_at defined in app controller
+  def online?
+    updated_at > 2.minutes.ago
+  end
+
   def userName 
       self.email.split(/@/).first
   end
