@@ -21,6 +21,7 @@ gem 'faker'
 gem "devise", github: "heartcombo/devise", branch: "main"
 gem 'friendly_id', '~> 5.4.0'
 gem 'ransack'
+gem "rolify"
 # gem "redis", "~> 4.0"
 # gem "kredis"
 # gem "bcrypt", "~> 3.1.7"

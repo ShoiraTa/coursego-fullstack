@@ -23,3 +23,6 @@
       .row
       ="current_sign_in_ip".humanize
       =user.current_sign_in_ip
+    .card-footer 
+      -user.roles.each do |role|
+        =role.name
