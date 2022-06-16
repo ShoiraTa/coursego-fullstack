@@ -20,7 +20,10 @@ class User < ApplicationRecord
     end
   end
 
-
+  # friendly id => pretty url
+    extend FriendlyId
+    friendly_id :email, use: :slugged
+  # Class methods
   def to_s
     email
   end

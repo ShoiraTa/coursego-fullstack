@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :update]
+  before_action :set_user, only: [:edit, :update, :show]
   
   def index
     # @users = User.all.order(created_at: :desc)
@@ -9,6 +9,9 @@ class UsersController < ApplicationController
 
   def edit
     authorize @user
+  end
+
+  def show
   end
 
   def update
@@ -23,7 +26,7 @@ class UsersController < ApplicationController
   private
 
   def set_user
-    @user = User.find(params[:id])
+    @user = User.friendly.find(params[:id])
   end
 
   def user_params
