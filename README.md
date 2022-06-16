@@ -96,7 +96,7 @@ To get a local copy up and running follow these simple example steps.
 - go to the repository folder in your command prompt.
 - run `bundle install`.
 - run `npm install`
-- create database in your postgre called `hello-rails-react`
+- create database `rails db:create`
 - run `rails db:migrate`
 - To run start the webpack run `./bin/webpack-dev-server`.
 - To run the rails server run `rails s` in your command prompt.
