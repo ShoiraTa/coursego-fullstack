@@ -22,6 +22,7 @@ gem "devise", github: "heartcombo/devise", branch: "main"
 gem 'friendly_id', '~> 5.4.0'
 gem 'ransack'
 gem "rolify"
+gem "pundit", "~> 2.2"
 # gem "redis", "~> 4.0"
 # gem "kredis"
 # gem "bcrypt", "~> 3.1.7"
@@ -44,3 +45,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+
