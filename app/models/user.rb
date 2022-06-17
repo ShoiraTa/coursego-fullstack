@@ -5,6 +5,7 @@ class User < ApplicationRecord
   
          # Assosiations
   has_many :courses
+  has_many :enrolments
   # rolify to give roles
   rolify 
 

@@ -6,6 +6,7 @@ class Course < ApplicationRecord
   # Assosiations
   belongs_to :user
   has_many :lessons, dependent: :destroy
+  has_many :enrolments, dependent: :destroy
 
 
   # Friendly id 

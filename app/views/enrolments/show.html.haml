@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Course:
+  = @enrolment.course
+%p
+  %b User:
+  = @enrolment.user
+%p
+  %b Rating:
+  = @enrolment.rating
+%p
+  %b Review:
+  = @enrolment.review
+%p
+  %b Price:
+  = @enrolment.price
+
+= link_to 'Edit', edit_enrolment_path(@enrolment)
+\|
+= link_to 'Back', enrolments_path

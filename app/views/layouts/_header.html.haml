@@ -18,6 +18,10 @@
             = link_to users_path, class: 'nav-link' do
               .fa.fa-users
               Users
+          %li.nav-item{class: "#{'active font-weight-bold' if current_page?(enrolments_path)}"}
+            = link_to enrolments_path, class: 'nav-link' do
+              .fa.fa-lock-open
+              Enrolments
 
           %li.nav-item{class: "#{'active font-weight-bold' if current_page?(new_course_path)}"}
             = link_to new_course_path, class: 'nav-link' do
