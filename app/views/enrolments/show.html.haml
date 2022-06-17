@@ -1,3 +1,9 @@
+
+- content_for :title do
+  Corsego 
+  \|
+  = @enrolment.course.title
+
 %p#notice= notice
 
 %p
@@ -14,7 +20,7 @@
   = @enrolment.review
 %p
   %b Price:
-  = @enrolment.price
+  = number_to_currency(@enrolment.price)
 
 = link_to 'Edit', edit_enrolment_path(@enrolment)
 \|

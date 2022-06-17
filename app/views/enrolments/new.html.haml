@@ -1,5 +1,14 @@
-%h1 New enrolment
+- content_for :title do
+  Corsego 
+  \|
+  New enrollment
 
-= render 'form'
-
-= link_to 'Back', enrolments_path
+.card
+  .card-header
+    %h1 
+      .fa.fa-lock-open
+      New enrolment
+  .card-body 
+    = render 'form'
+  .card-footer
+    = link_to 'Back', enrolments_path

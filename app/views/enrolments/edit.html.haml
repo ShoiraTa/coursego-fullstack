@@ -1,7 +1,15 @@
+- content_for :title do
+  Corsego 
+  \|
+  =@enrolment
+
+
 %h1 Editing enrolment
 
-= render 'form'
-
-= link_to 'Show', @enrolment
-\|
-= link_to 'Back', enrolments_path
+.card
+  .card-header
+    %h1 Editing enrolment
+  .card-body 
+    = render 'form'
+  .card-footer
+    = link_to 'Back', enrolments_path

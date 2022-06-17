@@ -1,28 +1,23 @@
 class EnrolmentsController < ApplicationController
   before_action :set_enrolment, only: %i[ show edit update destroy ]
 
-  # GET /enrolments or /enrolments.json
   def index
     @enrolments = Enrolment.all
   end
 
-  # GET /enrolments/1 or /enrolments/1.json
   def show
   end
 
-  # GET /enrolments/new
   def new
     @enrolment = Enrolment.new
   end
 
-  # GET /enrolments/1/edit
   def edit
   end
 
-  # POST /enrolments or /enrolments.json
   def create
     @enrolment = Enrolment.new(enrolment_params)
-
+    @enrolment.price =  @enrolment.course.price
     respond_to do |format|
       if @enrolment.save
         format.html { redirect_to enrolment_url(@enrolment), notice: "Enrolment was successfully created." }
@@ -34,7 +29,6 @@ class EnrolmentsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /enrolments/1 or /enrolments/1.json
   def update
     respond_to do |format|
       if @enrolment.update(enrolment_params)
@@ -47,7 +41,6 @@ class EnrolmentsController < ApplicationController
     end
   end
 
-  # DELETE /enrolments/1 or /enrolments/1.json
   def destroy
     @enrolment.destroy
 
@@ -58,13 +51,12 @@ class EnrolmentsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_enrolment
       @enrolment = Enrolment.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def enrolment_params
-      params.require(:enrolment).permit(:course_id, :user_id, :rating, :review, :price)
+      params.require(:enrolment).permit(:course_id, :user_id, :rating, :review)
     end
 end
