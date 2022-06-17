@@ -7,7 +7,7 @@
     = f.input :title
     = f.label :content
     = f.rich_text_area :content
-    %small= f.error :description, class: 'text-danger'
+    %small= f.error :content, class: 'text-danger'
     = f.input :course_id, input_html: {value: @lesson.course_id || @course.id}, as: :hidden
   %p
   .form-actions
