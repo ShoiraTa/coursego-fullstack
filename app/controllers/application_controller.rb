@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  # Pagination 
+  include Pagy::Backend
   # give role based access
   include Pundit::Authorization
   protect_from_forgery

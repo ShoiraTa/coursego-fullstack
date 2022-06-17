@@ -24,6 +24,7 @@ gem 'ransack'
 gem "rolify"
 gem "pundit", "~> 2.2"
 gem 'exception_notification'
+gem 'pagy', '~> 5.10'
 # gem "redis", "~> 4.0"
 # gem "kredis"
 # gem "bcrypt", "~> 3.1.7"

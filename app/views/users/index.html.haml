@@ -2,10 +2,10 @@
   Users
   = @users.count
 
-.row.row-cols-1.row-cols-md-3
-  - @users.each do |user|
+-# .row.row-cols-1.row-cols-md-3
+-#   - @users.each do |user|
 
-    = render 'users/user', user:user
+-#     = render 'users/user', user:user
 
 .form-inline
   = search_form_for @q do |f|
@@ -25,6 +25,7 @@
       %th= 'last_sign_in_at'.humanize
       %th= 'current_sign_in_ip'.humanize
       %th= 'last_sign_in_ip'.humanize
+      %th Roles
   %tbody
     - @users.each do |user|
       %tr
@@ -36,3 +37,9 @@
         %td= user.last_sign_in_at
         %td= user.current_sign_in_ip
         %td= user.last_sign_in_ip
+        %td 
+          -user.roles.each do |role|
+            %br
+            =role.name
+          -if policy(user).edit?
+            =link_to 'Edit roles', edit_user_path(user), class: 'btn'   if policy(user).edit?
