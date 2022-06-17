@@ -27,7 +27,7 @@
       .col-md-6
         .text-right
           .fa.fa-chalkboard-teacher
-          = course.user.userName
+          = link_to course.user.userName, user_path(course.user)
   -if current_user
     - if policy(course).edit?
       .card-footer

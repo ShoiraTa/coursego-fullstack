@@ -1,9 +1,11 @@
 .card
   .card-header
-    = link_to lesson.title, course_lesson_path(lesson.course)
+    = link_to lesson.title, course_lesson_path(lesson.course,  lesson)
   .card-body
     = lesson.content
     = lesson.course
   .card-footer
+  -if policy(lesson).edit?
     = link_to 'Edit', edit_course_lesson_path(lesson.course,  lesson ), class: 'btn btn-sm btn-warning'
-    -# = link_to 'Destroy', lesson, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger'
+    = button_to 'Destroy',  [lesson.course, lesson], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger'
+%p

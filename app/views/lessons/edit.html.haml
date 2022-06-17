@@ -1,7 +1,7 @@
 %h1 Editing lesson
 
--# = render 'form', 
+= render 'lessons/form'
 
-= link_to 'Show', @lesson
+= link_to 'Show', course_lesson_path(@lesson.course, @lesson)
 \|
-= link_to 'Back', lessons_path
+= link_to 'Back', course_lesson_path(@lesson.course, @lesson)
