@@ -1,0 +1,35 @@
+.card
+  .card-header
+    .fa.fa-graduation-cap
+    = link_to course.title, course_path(course)
+  .card-body
+    %small= simple_format(course.short_description)
+  .card-footer
+    .text-center
+      = number_to_currency(course.price)
+  .card-footer
+    .text-center
+      = course.lessons.count
+  .card-footer
+    .row
+      .col-md-6
+        .fa.fa-globe-africa
+        = course.language
+      .col-md-6
+        .text-right
+          .fa.fa-signal
+          = course.level
+  .card-footer
+    .row
+      .col-md-6
+        .far.fa-clock
+        = course.created_at.strftime('%d-%b-%Y')
+      .col-md-6
+        .text-right
+          .fa.fa-chalkboard-teacher
+          = link_to course.user.userName, user_path(course.user)
+  -if current_user
+    - if policy(course).edit?
+      .card-footer
+        = link_to 'Edit', edit_course_path(course), class: 'btn btn-sm btn-warning' if policy(course).edit?
+        = link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-sm btn-danger'
