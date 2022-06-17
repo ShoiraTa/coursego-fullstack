@@ -23,6 +23,7 @@ gem 'friendly_id', '~> 5.4.0'
 gem 'ransack'
 gem "rolify"
 gem "pundit", "~> 2.2"
+gem 'exception_notification'
 # gem "redis", "~> 4.0"
 # gem "kredis"
 # gem "bcrypt", "~> 3.1.7"
