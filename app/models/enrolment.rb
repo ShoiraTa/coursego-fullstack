@@ -11,6 +11,8 @@ class Enrolment < ApplicationRecord
     "#{user}" + " #{course}"
   end
 
+
+
   protected
   def cannot_subscribe_to_own_course
     if self.new_record?
@@ -21,5 +23,6 @@ class Enrolment < ApplicationRecord
       end
     end
   end
+
 
 end

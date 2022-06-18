@@ -38,5 +38,7 @@ class User < ApplicationRecord
       self.email.split(/@/).first
   end
 
-
+  def buy_course(course)
+    self.enrolments.create(course: course, price: course.price)
+  end
 end

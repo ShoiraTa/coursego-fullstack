@@ -6,6 +6,7 @@
     %small= simple_format(course.short_description)
   .card-footer
     .text-center
+      = enrolment_button(course)
       = number_to_currency(course.price)
   .card-footer
     .text-center
