@@ -3,7 +3,9 @@ class EnrolmentsController < ApplicationController
   before_action :set_course, only: [:new, :create]
 
   def index
+
     @enrolments = Enrolment.all
+    authorize @enrolments
   end
 
   def show
@@ -14,6 +16,7 @@ class EnrolmentsController < ApplicationController
   end
 
   def edit
+    authorize @enrolment
   end
 
   def create
@@ -27,6 +30,7 @@ class EnrolmentsController < ApplicationController
   end
 
   def update
+    authorize @enrolment
     respond_to do |format|
       if @enrolment.update(enrolment_params)
         format.html { redirect_to enrolment_url(@enrolment), notice: "Enrolment was successfully updated." }
@@ -40,7 +44,7 @@ class EnrolmentsController < ApplicationController
 
   def destroy
     @enrolment.destroy
-
+    authorize @enrolment
     respond_to do |format|
       format.html { redirect_to enrolments_url, notice: "Enrolment was successfully destroyed." }
       format.json { head :no_content }
